@@ -1,43 +1,44 @@
-# 🇯🇵 Japanese Learning Hub
+# 🇯🇵 Japanese For Travel
 
-Interactive Japanese phrase guides with audio pronunciation for travelers and learners.
+Interactive phrase guides with audio pronunciation specifically designed for travelers visiting Japan.
 
 ## 🚀 Quick Start
 
-**New to Japanese?** Start here: [`21_day_japanese_phrases.html`](21_day_japanese_phrases.html)
+**Planning a trip to Japan?** Start here: [`21_day_japanese_phrases.html`](21_day_japanese_phrases.html)
 
-This is your fast-track introduction with the most essential phrases organized by day. Perfect for travelers with limited time!
+This is your fast-track introduction with the most essential travel phrases organized by day. Perfect for travelers with limited time before their trip!
 
 ## 📚 Contents
 
-This repository contains multiple learning resources:
+This repository contains multiple learning resources tailored for Japan travel:
 
 ### 1. **21-Day Quick Start** (`21_day_japanese_phrases.html`) ⭐ START HERE
-Your fastest path to speaking Japanese! A structured 21-day program with daily practice goals.
+Your fastest path to travel-ready Japanese! A structured 21-day program with daily practice goals.
 
 - **Week 1:** Survival Confidence (Days 1-7)
 - **Week 2:** Daily Life & Movement (Days 8-14)
 - **Week 3:** Confidence & Natural Flow (Days 15-21)
 
-Perfect for: First-time learners and travelers preparing for a trip.
+Perfect for: Travelers preparing for their Japan trip.
 
 ### 2. **Organized by Topic** (via `index.html`)
-Interactive learning hub with phrases grouped by situation:
+Interactive learning hub with travel phrases grouped by situation:
 
-- 👋 Basic Phrases - Greetings & politeness
+- 👋 Basic Phrases - Greetings, politeness & food word patterns
 - 🔢 Numbers - Counting 1-10
 - 💬 Basic Conversation - Yes, no, help phrases
-- 🗺️ Directions - Finding stations, toilets, destinations
+- 🗺️ Directions - Finding stations, subway, destinations
 - 🛍️ Shopping - Prices, payment, browsing
 - 🥘 Food Ingredients - Meat, fish, vegetables
-- 🍜 At a Restaurant - Ordering ramen, sushi, wagyu
-- 🍢 Food Stalls - Street food ordering
-- 🚕 Taxi - Getting around, directions
+- 🍜 At a Restaurant - Ordering ramen, sushi, wagyu with allergy info
+- 🍢 Food Stalls - Street food ordering with allergy info
+- 🚕 Taxi - Getting around, directions, payment
+- 🚻 Signs & Symbols - Recognize restrooms, entrance/exit, open/closed
 
-Perfect for: Topic-focused learning and quick reference.
+Perfect for: Quick reference while traveling in Japan.
 
 ### 3. **Complete Travel Guide** (`japan_travel_phrases.html`)
-All phrases in one comprehensive reference page.
+All travel phrases in one comprehensive reference page.
 
 **Categories:**
 - 👋 Greetings & Basic Politeness
@@ -55,14 +56,18 @@ Perfect for: Quick reference while traveling in Japan.
 
 ## ✨ Features
 
-- **Audio Pronunciation:** Click the ▶ button to hear each phrase
+- **Audio Pronunciation:** Click the ▶ button to hear each phrase in Japanese
+- **Travel-Focused Content:** All phrases are practical for real travel situations
 - **Three Learning Formats:**
   - Japanese characters (Hiragana/Kanji)
   - Romaji (romanized pronunciation)
   - English translation
+- **Allergy Support:** Peanut allergy phrases included for restaurants and food stalls
+- **Food Word Patterns:** Learn to decode Japanese menu items (-yaki, -don, -men, etc.)
+- **Sign Recognition:** Essential signs for restrooms, entrance/exit, open/closed
 - **Mobile-Friendly:** Works on phones, tablets, and computers
 - **No Installation:** Just open in your browser
-- **Offline Compatible:** Download and use without internet
+- **Offline Compatible:** Download and use without internet while traveling
 
 ## 🚀 How to Use
 
@@ -120,17 +125,18 @@ The audio uses your browser's built-in Text-to-Speech (TTS) feature.
 - Learn greetings and basic politeness first
 - Use pointing + "これをお願いします" (kore wo onegaishimasu) when unsure
 
-## 🎯 Quick Start Phrases
+## 🎯 Essential Travel Phrases
 
-Learn these first - they work in almost any situation:
+Learn these first - they work in almost any travel situation:
 
 1. **すみません** (sumimasen) - Excuse me / Sorry / Thanks
 2. **ありがとうございます** (arigatō gozaimasu) - Thank you
 3. **これをお願いします** (kore wo onegaishimasu) - This one, please
 4. **分かりません** (wakarimasen) - I don't understand
 5. **日本語は少しだけです** (nihongo wa sukoshi dake desu) - My Japanese is only a little
+6. **ピーナッツアレルギーがあります** (pīnattsu arerugī ga arimasu) - I have a peanut allergy
 
-**Pro tip:** The last phrase makes Japanese people more patient and helpful!
+**Pro tip:** Saying "my Japanese is only a little" makes Japanese people more patient and helpful!
 
 ## 🌟 One Phrase to Rule Them All
 
@@ -138,7 +144,7 @@ Learn these first - they work in almost any situation:
 *(sumimasen, nihongo wa sukoshi dake desu)*
 "Excuse me, my Japanese is only a little"
 
-This phrase instantly makes people slower, kinder, and more helpful. Use it liberally!
+This phrase instantly makes people slower, kinder, and more helpful. Use it liberally when traveling!
 
 ## 🍜 Restaurant Etiquette
 
@@ -161,14 +167,14 @@ This phrase instantly makes people slower, kinder, and more helpful. Use it libe
 
 ## 📝 License
 
-These learning resources are provided free for personal use. Feel free to share with friends traveling to Japan!
+These travel resources are provided free for personal use. Feel free to share with friends traveling to Japan!
 
 ## 🙏 Acknowledgments
 
-Designed for travelers who want to be respectful and communicate effectively in Japan. Practice makes perfect - 頑張ってください！(Ganbatte kudasai - Good luck!)
+Designed specifically for travelers who want to communicate effectively and respectfully in Japan. Practice makes perfect - 頑張ってください！(Ganbatte kudasai - Good luck!)
 
 ---
 
-**Happy Learning! 🇯🇵✨**
+**Happy Travels! 🇯🇵✈️**
 
 For issues or suggestions, please open an issue on GitHub.
