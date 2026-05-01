@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21-Day Japanese Speaking Plan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .week-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin: 30px 0 20px 0;
+            font-weight: 600;
+            font-size: 1.3em;
+        }
+
+        .week-goal {
+            color: white;
+            font-size: 0.9em;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        .day-section {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .day-title {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .phrase-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .phrase-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .phrase-content {
+            flex: 1;
+        }
+
+        .japanese {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 3px;
+            font-weight: 500;
+        }
+
+        .romaji {
+            font-size: 0.95em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 3px;
+        }
+
+        .english {
+            font-size: 0.85em;
+            color: #888;
+        }
+
+        .play-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+        .play-button:active {
+            transform: scale(0.95);
+        }
+
+        .play-button.playing {
+            opacity: 0.6;
+        }
+
+        .instruction {
+            color: #555;
+            font-style: italic;
+            margin-top: 10px;
+            padding: 10px;
+            background: #e8f4f8;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        .celebration {
+            color: #28a745;
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: #856404;
+        }
+
+        .highlight-box {
+            background: #e8f4f8;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: #0c5460;
+        }
+
+        .highlight-box .japanese {
+            color: #0c5460;
+            font-size: 1.4em;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🇯🇵 21-Day Japanese Speaking Plan</h1>
+        <div class="subtitle">Be polite, understood, and comfortable speaking in Japan</div>
+
+        <!-- WEEK 1 -->
+        <div class="week-header">
+            🗓️ WEEK 1 — Survival Confidence (Days 1–7)
+            <div class="week-goal">Goal: Be polite, understood, and comfortable opening your mouth</div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 1 — Politeness Foundation</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">すみません</div>
+                    <div class="romaji">sumimasen</div>
+                    <div class="english">excuse me / sorry / thanks</div>
+                </div>
+                <button class="play-button" onclick="speak('すみません', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ありがとうございます</div>
+                    <div class="romaji">arigatō gozaimasu</div>
+                    <div class="english">thank you</div>
+                </div>
+                <button class="play-button" onclick="speak('ありがとうございます', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ありがとうございました</div>
+                    <div class="romaji">arigatō gozaimashita</div>
+                    <div class="english">thank you (after/past tense)</div>
+                </div>
+                <button class="play-button" onclick="speak('ありがとうございました', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="instruction">✅ These three phrases solve many situations alone. Practice saying each 3 times.</div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 2 — Choosing & Ordering</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">これをお願いします</div>
+                    <div class="romaji">kore wo onegaishimasu</div>
+                    <div class="english">this one, please</div>
+                </div>
+                <button class="play-button" onclick="speak('これをお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">これと、これをお願いします</div>
+                    <div class="romaji">kore to, kore wo onegaishimasu</div>
+                    <div class="english">this and this, please</div>
+                </div>
+                <button class="play-button" onclick="speak('これと、これをお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="instruction">Practice pointing at imaginary items while speaking.</div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 3 — Limits & Comfort</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">大丈夫です</div>
+                    <div class="romaji">daijōbu desu</div>
+                    <div class="english">I'm okay / no thanks</div>
+                </div>
+                <button class="play-button" onclick="speak('大丈夫です', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">今日はこれだけで</div>
+                    <div class="romaji">kyō wa kore dake de</div>
+                    <div class="english">just this today</div>
+                </div>
+                <button class="play-button" onclick="speak('今日はこれだけで', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="instruction">Practice saying calmly, with a nod.</div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 4 — Asking for Help</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">すみません、ちょっといいですか？</div>
+                    <div class="romaji">sumimasen, chotto ii desu ka?</div>
+                    <div class="english">excuse me, may I ask?</div>
+                </div>
+                <button class="play-button" onclick="speak('すみません、ちょっといいですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">助かりました</div>
+                    <div class="romaji">tasukarimashita</div>
+                    <div class="english">that helped a lot</div>
+                </div>
+                <button class="play-button" onclick="speak('助かりました', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="instruction">Practice one slow, relaxed delivery.</div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 5 — Not Understanding (Very Important)</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">分かりません</div>
+                    <div class="romaji">wakarimasen</div>
+                    <div class="english">I don't understand</div>
+                </div>
+                <button class="play-button" onclick="speak('分かりません', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">日本語は少しだけです</div>
+                    <div class="romaji">nihongo wa sukoshi dake desu</div>
+                    <div class="english">my Japanese is only a little</div>
+                </div>
+                <button class="play-button" onclick="speak('日本語は少しだけです', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ゆっくりお願いします</div>
+                    <div class="romaji">yukkuri onegaishimasu</div>
+                    <div class="english">slowly, please</div>
+                </div>
+                <button class="play-button" onclick="speak('ゆっくりお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="instruction">These reduce pressure instantly.</div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 6 — Eating Etiquette</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">いただきます</div>
+                    <div class="romaji">itadakimasu</div>
+                    <div class="english">before eating (let's eat)</div>
+                </div>
+                <button class="play-button" onclick="speak('いただきます', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ごちそうさまでした</div>
+                    <div class="romaji">gochisōsama deshita</div>
+                    <div class="english">after eating (thank you for the meal)</div>
+                </div>
+                <button class="play-button" onclick="speak('ごちそうさまでした', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">とても美味しかったです</div>
+                    <div class="romaji">totemo oishikatta desu</div>
+                    <div class="english">it was very delicious</div>
+                </div>
+                <button class="play-button" onclick="speak('とても美味しかったです', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="instruction">Say these with warmth, not volume.</div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 7 — Mini Flow (Combine)</div>
+
+            <div class="instruction">Say this mini sequence aloud:</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">すみません → これをお願いします → ありがとうございました → ごちそうさまでした</div>
+                    <div class="english">excuse me → this please → thank you → thanks for the meal</div>
+                </div>
+                <button class="play-button" onclick="speak('すみません。これをお願いします。ありがとうございました。ごちそうさまでした', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="celebration">🎉 You can already eat confidently in Japan!</div>
+        </div>
+
+        <!-- WEEK 2 -->
+        <div class="week-header">
+            🗓️ WEEK 2 — Daily Life & Movement (Days 8–14)
+            <div class="week-goal">Goal: Navigate shops, stations, and small talk</div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 8 — Directions</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">トイレはどこですか？</div>
+                    <div class="romaji">toire wa doko desu ka?</div>
+                    <div class="english">where is the toilet?</div>
+                </div>
+                <button class="play-button" onclick="speak('トイレはどこですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">駅はどこですか？</div>
+                    <div class="romaji">eki wa doko desu ka?</div>
+                    <div class="english">where is the station?</div>
+                </div>
+                <button class="play-button" onclick="speak('駅はどこですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="instruction">Practice substituting words in the pattern: ~はどこですか？</div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 9 — Transportation</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">この電車は東京に行きますか？</div>
+                    <div class="romaji">kono densha wa tōkyō ni ikimasu ka?</div>
+                    <div class="english">does this train go to Tokyo?</div>
+                </div>
+                <button class="play-button" onclick="speak('この電車は東京に行きますか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">分かりました</div>
+                    <div class="romaji">wakarimashita</div>
+                    <div class="english">I understand</div>
+                </div>
+                <button class="play-button" onclick="speak('分かりました', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 10 — Shops & Browsing</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ちょっと見るだけです</div>
+                    <div class="romaji">chotto miru dake desu</div>
+                    <div class="english">just looking</div>
+                </div>
+                <button class="play-button" onclick="speak('ちょっと見るだけです', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">あとで来ます</div>
+                    <div class="romaji">ato de kimasu</div>
+                    <div class="english">I'll come back later</div>
+                </div>
+                <button class="play-button" onclick="speak('あとで来ます', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 11 — Quantities & Additions</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">もう一つお願いします</div>
+                    <div class="romaji">mō hitotsu onegaishimasu</div>
+                    <div class="english">one more, please</div>
+                </div>
+                <button class="play-button" onclick="speak('もう一つお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">少なめでお願いします</div>
+                    <div class="romaji">sukuname de onegaishimasu</div>
+                    <div class="english">smaller portion, please</div>
+                </div>
+                <button class="play-button" onclick="speak('少なめでお願いします', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 12 — Confirming & Correcting</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">はい</div>
+                    <div class="romaji">hai</div>
+                    <div class="english">yes</div>
+                </div>
+                <button class="play-button" onclick="speak('はい', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">いいえ</div>
+                    <div class="romaji">iie</div>
+                    <div class="english">no</div>
+                </div>
+                <button class="play-button" onclick="speak('いいえ', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">そうです</div>
+                    <div class="romaji">sō desu</div>
+                    <div class="english">that's right</div>
+                </div>
+                <button class="play-button" onclick="speak('そうです', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">違います</div>
+                    <div class="romaji">chigaimasu</div>
+                    <div class="english">that's not it</div>
+                </div>
+                <button class="play-button" onclick="speak('違います', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 13 — Social Ease</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">こんにちは</div>
+                    <div class="romaji">konnichiwa</div>
+                    <div class="english">hello / good afternoon</div>
+                </div>
+                <button class="play-button" onclick="speak('こんにちは', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">こんばんは</div>
+                    <div class="romaji">konbanwa</div>
+                    <div class="english">good evening</div>
+                </div>
+                <button class="play-button" onclick="speak('こんばんは', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">またね</div>
+                    <div class="romaji">mata ne</div>
+                    <div class="english">see you later (casual)</div>
+                </div>
+                <button class="play-button" onclick="speak('またね', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 14 — Realistic Role Play</div>
+
+            <div class="instruction">Speak this out loud:</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">こんにちは → すみません → おすすめはどれですか → これをお願いします → ありがとうございました</div>
+                    <div class="english">hello → excuse me → what do you recommend? → this please → thank you</div>
+                </div>
+                <button class="play-button" onclick="speak('こんにちは。すみません。おすすめはどれですか。これをお願いします。ありがとうございました', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="celebration">✅ This sounds completely natural in Japan!</div>
+        </div>
+
+        <!-- WEEK 3 -->
+        <div class="week-header">
+            🗓️ WEEK 3 — Confidence & Natural Flow (Days 15–21)
+            <div class="week-goal">Goal: Speak without fear or hesitation</div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 15 — Recommendations</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">おすすめはどれですか？</div>
+                    <div class="romaji">osusume wa dore desu ka?</div>
+                    <div class="english">what do you recommend?</div>
+                </div>
+                <button class="play-button" onclick="speak('おすすめはどれですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">それでお願いします</div>
+                    <div class="romaji">sore de onegaishimasu</div>
+                    <div class="english">I'll go with that</div>
+                </div>
+                <button class="play-button" onclick="speak('それでお願いします', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 16 — Adjustments</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">レアでお願いします</div>
+                    <div class="romaji">rea de onegaishimasu</div>
+                    <div class="english">rare, please</div>
+                </div>
+                <button class="play-button" onclick="speak('レアでお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">軽く焼いてください</div>
+                    <div class="romaji">karuku yaite kudasai</div>
+                    <div class="english">lightly grilled, please</div>
+                </div>
+                <button class="play-button" onclick="speak('軽く焼いてください', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 17 — Time & Pacing</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ちょっと待ってください</div>
+                    <div class="romaji">chotto matte kudasai</div>
+                    <div class="english">please wait a moment</div>
+                </div>
+                <button class="play-button" onclick="speak('ちょっと待ってください', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">大丈夫です、急いでいません</div>
+                    <div class="romaji">daijōbu desu, isoide imasen</div>
+                    <div class="english">I'm okay, no rush</div>
+                </div>
+                <button class="play-button" onclick="speak('大丈夫です、急いでいません', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 18 — Expressing Satisfaction</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ちょうどいいです</div>
+                    <div class="romaji">chōdo ii desu</div>
+                    <div class="english">that's perfect</div>
+                </div>
+                <button class="play-button" onclick="speak('ちょうどいいです', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">満足です</div>
+                    <div class="romaji">manzoku desu</div>
+                    <div class="english">I'm satisfied</div>
+                </div>
+                <button class="play-button" onclick="speak('満足です', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 19 — Polite Exit (Very Important)</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ごちそうさまでした。ありがとうございました。</div>
+                    <div class="romaji">gochisōsama deshita. arigatō gozaimashita.</div>
+                    <div class="english">thank you for the meal. thank you very much.</div>
+                </div>
+                <button class="play-button" onclick="speak('ごちそうさまでした。ありがとうございました', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="instruction">Practice saying it slowly, warmly, with a slight bow.</div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 20 — Full Interaction Rehearsal</div>
+
+            <div class="instruction">Say this naturally, without stopping:</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">すみません → 日本語は少しだけです → おすすめはどれですか → これをお願いします → とても美味しかったです → ごちそうさまでした</div>
+                    <div class="english">excuse me → my Japanese is only a little → what do you recommend? → this please → it was very delicious → thank you for the meal</div>
+                </div>
+                <button class="play-button" onclick="speak('すみません。日本語は少しだけです。おすすめはどれですか。これをお願いします。とても美味しかったです。ごちそうさまでした', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-title">Day 21 — Confidence Day</div>
+
+            <div class="instruction">Repeat only what feels useful. Speak calmly. Smile.</div>
+            <div class="celebration">🎉 You are now functionally conversational in daily Japan life!</div>
+        </div>
+
+        <!-- HIGHLIGHT BOX -->
+        <div class="highlight-box">
+            <strong>🌟 One phrase to remember forever</strong>
+            <div style="margin-top: 10px;">If all else fails:</div>
+
+            <div class="phrase-card" style="margin-top: 10px;">
+                <div class="phrase-content">
+                    <div class="japanese">すみません、日本語は少しだけです</div>
+                    <div class="romaji">sumimasen, nihongo wa sukoshi dake desu</div>
+                    <div class="english">excuse me, my Japanese is only a little</div>
+                </div>
+                <button class="play-button" onclick="speak('すみません、日本語は少しだけです', 'ja-JP')">▶</button>
+            </div>
+
+            <div style="margin-top: 10px; font-style: italic;">This makes people kinder, slower, and more helpful.</div>
+        </div>
+
+        <div class="note">
+            <strong>Note:</strong> This page uses your browser's built-in text-to-speech feature.
+            The pronunciation quality depends on your browser and operating system.
+            For best results, use Chrome or Edge on Windows with Japanese language pack installed.
+        </div>
+
+        <div class="footer">
+            Click the play button (▶) to hear each phrase pronounced in Japanese.<br>
+            Practice daily and you'll be ready for Japan in 21 days! 🇯🇵
+        </div>
+    </div>
+
+    <script>
+        function speak(text, lang) {
+            // Cancel any ongoing speech
+            window.speechSynthesis.cancel();
+
+            // Create a new speech utterance
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = lang;
+            utterance.rate = 0.85; // Slightly slower for clarity
+            utterance.pitch = 1;
+            utterance.volume = 1;
+
+            // Find the button that was clicked
+            const button = event.target;
+            button.classList.add('playing');
+
+            // Remove playing class when done
+            utterance.onend = function() {
+                button.classList.remove('playing');
+            };
+
+            utterance.onerror = function() {
+                button.classList.remove('playing');
+                alert('Speech synthesis failed. Make sure your browser supports Japanese text-to-speech.');
+            };
+
+            // Speak the text
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // Check if speech synthesis is available
+        if (!('speechSynthesis' in window)) {
+            document.querySelector('.note').innerHTML =
+                '<strong>Warning:</strong> Your browser does not support text-to-speech. ' +
+                'Please use a modern browser like Chrome, Edge, or Safari.';
+        }
+    </script>
+</body>
+</html>

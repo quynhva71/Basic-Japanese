@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Travel Phrases Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            margin: 35px 0 20px 0;
+            font-weight: 600;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section {
+            background: #f8f9fa;
+            border-left: 4px solid #f5576c;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 1.1em;
+            color: #444;
+            margin-bottom: 15px;
+            font-weight: 600;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .phrase-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px 18px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .phrase-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(245, 87, 108, 0.2);
+        }
+
+        .phrase-content {
+            flex: 1;
+        }
+
+        .japanese {
+            font-size: 1.4em;
+            color: #333;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .romaji {
+            font-size: 1em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+
+        .english {
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .play-button {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 3px 10px rgba(245, 87, 108, 0.3);
+        }
+
+        .play-button:hover {
+            transform: scale(1.15);
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.5);
+        }
+
+        .play-button:active {
+            transform: scale(0.95);
+        }
+
+        .play-button.playing {
+            opacity: 0.6;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .tip-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: #856404;
+            font-size: 0.95em;
+        }
+
+        .tip-box strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .note {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 5px;
+            color: #0c5460;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .icon {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🇯🇵 Japanese Travel Phrases</h1>
+        <div class="subtitle">Essential phrases for your Japan adventure</div>
+
+        <!-- GREETINGS -->
+        <div class="category-header">
+            <span class="icon">👋</span> Greetings & Basic Politeness
+        </div>
+
+        <div class="section">
+            <div class="section-title">Greetings</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">おはようございます</div>
+                    <div class="romaji">ohayō gozaimasu</div>
+                    <div class="english">good morning</div>
+                </div>
+                <button class="play-button" onclick="speak('おはようございます', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">こんにちは</div>
+                    <div class="romaji">konnichiwa</div>
+                    <div class="english">hello / good afternoon</div>
+                </div>
+                <button class="play-button" onclick="speak('こんにちは', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">こんばんは</div>
+                    <div class="romaji">konbanwa</div>
+                    <div class="english">good evening</div>
+                </div>
+                <button class="play-button" onclick="speak('こんばんは', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">おやすみなさい</div>
+                    <div class="romaji">oyasuminasai</div>
+                    <div class="english">good night</div>
+                </div>
+                <button class="play-button" onclick="speak('おやすみなさい', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">さようなら</div>
+                    <div class="romaji">sayōnara</div>
+                    <div class="english">goodbye</div>
+                </div>
+                <button class="play-button" onclick="speak('さようなら', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">またね</div>
+                    <div class="romaji">mata ne</div>
+                    <div class="english">see you later (casual)</div>
+                </div>
+                <button class="play-button" onclick="speak('またね', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Essential Politeness</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">すみません</div>
+                    <div class="romaji">sumimasen</div>
+                    <div class="english">excuse me / sorry</div>
+                </div>
+                <button class="play-button" onclick="speak('すみません', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ありがとうございます</div>
+                    <div class="romaji">arigatō gozaimasu</div>
+                    <div class="english">thank you</div>
+                </div>
+                <button class="play-button" onclick="speak('ありがとうございます', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">どういたしまして</div>
+                    <div class="romaji">dō itashimashite</div>
+                    <div class="english">you're welcome</div>
+                </div>
+                <button class="play-button" onclick="speak('どういたしまして', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">お願いします</div>
+                    <div class="romaji">onegaishimasu</div>
+                    <div class="english">please</div>
+                </div>
+                <button class="play-button" onclick="speak('お願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ごめんなさい</div>
+                    <div class="romaji">gomen nasai</div>
+                    <div class="english">I'm sorry</div>
+                </div>
+                <button class="play-button" onclick="speak('ごめんなさい', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <!-- BASIC CONVERSATION -->
+        <div class="category-header">
+            <span class="icon">💬</span> Basic Conversation
+        </div>
+
+        <div class="section">
+            <div class="section-title">Common Questions & Responses</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">はい</div>
+                    <div class="romaji">hai</div>
+                    <div class="english">yes</div>
+                </div>
+                <button class="play-button" onclick="speak('はい', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">いいえ</div>
+                    <div class="romaji">iie</div>
+                    <div class="english">no</div>
+                </div>
+                <button class="play-button" onclick="speak('いいえ', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">分かりません</div>
+                    <div class="romaji">wakarimasen</div>
+                    <div class="english">I don't understand</div>
+                </div>
+                <button class="play-button" onclick="speak('分かりません', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">英語を話せますか？</div>
+                    <div class="romaji">eigo wo hanasemasu ka?</div>
+                    <div class="english">do you speak English?</div>
+                </div>
+                <button class="play-button" onclick="speak('英語を話せますか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">英語が分かりますか？</div>
+                    <div class="romaji">eigo ga wakarimasu ka?</div>
+                    <div class="english">do you understand English?</div>
+                </div>
+                <button class="play-button" onclick="speak('英語が分かりますか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">日本語は少しだけです</div>
+                    <div class="romaji">nihongo wa sukoshi dake desu</div>
+                    <div class="english">my Japanese is only a little</div>
+                </div>
+                <button class="play-button" onclick="speak('日本語は少しだけです', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">もう一度お願いします</div>
+                    <div class="romaji">mō ichido onegaishimasu</div>
+                    <div class="english">one more time, please</div>
+                </div>
+                <button class="play-button" onclick="speak('もう一度お願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ゆっくりお願いします</div>
+                    <div class="romaji">yukkuri onegaishimasu</div>
+                    <div class="english">slowly, please</div>
+                </div>
+                <button class="play-button" onclick="speak('ゆっくりお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">助けてください</div>
+                    <div class="romaji">tasukete kudasai</div>
+                    <div class="english">please help me</div>
+                </div>
+                <button class="play-button" onclick="speak('助けてください', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <!-- NUMBERS -->
+        <div class="category-header">
+            <span class="icon">🔢</span> Numbers (1-10)
+        </div>
+
+        <div class="section">
+            <div class="section-title">Basic Counting</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">一</div>
+                    <div class="romaji">ichi</div>
+                    <div class="english">one (1)</div>
+                </div>
+                <button class="play-button" onclick="speak('いち', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">二</div>
+                    <div class="romaji">ni</div>
+                    <div class="english">two (2)</div>
+                </div>
+                <button class="play-button" onclick="speak('に', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">三</div>
+                    <div class="romaji">san</div>
+                    <div class="english">three (3)</div>
+                </div>
+                <button class="play-button" onclick="speak('さん', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">四</div>
+                    <div class="romaji">yon / shi</div>
+                    <div class="english">four (4)</div>
+                </div>
+                <button class="play-button" onclick="speak('よん', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">五</div>
+                    <div class="romaji">go</div>
+                    <div class="english">five (5)</div>
+                </div>
+                <button class="play-button" onclick="speak('ご', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">六</div>
+                    <div class="romaji">roku</div>
+                    <div class="english">six (6)</div>
+                </div>
+                <button class="play-button" onclick="speak('ろく', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">七</div>
+                    <div class="romaji">nana / shichi</div>
+                    <div class="english">seven (7)</div>
+                </div>
+                <button class="play-button" onclick="speak('なな', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">八</div>
+                    <div class="romaji">hachi</div>
+                    <div class="english">eight (8)</div>
+                </div>
+                <button class="play-button" onclick="speak('はち', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">九</div>
+                    <div class="romaji">kyū</div>
+                    <div class="english">nine (9)</div>
+                </div>
+                <button class="play-button" onclick="speak('きゅう', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">十</div>
+                    <div class="romaji">jū</div>
+                    <div class="english">ten (10)</div>
+                </div>
+                <button class="play-button" onclick="speak('じゅう', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <!-- DIRECTIONS -->
+        <div class="category-header">
+            <span class="icon">🗺️</span> Asking for Directions
+        </div>
+
+        <div class="section">
+            <div class="section-title">Finding Places</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">〜はどこですか？</div>
+                    <div class="romaji">~ wa doko desu ka?</div>
+                    <div class="english">where is ~?</div>
+                </div>
+                <button class="play-button" onclick="speak('はどこですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">駅はどこですか？</div>
+                    <div class="romaji">eki wa doko desu ka?</div>
+                    <div class="english">where is the station?</div>
+                </div>
+                <button class="play-button" onclick="speak('駅はどこですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">トイレはどこですか？</div>
+                    <div class="romaji">toire wa doko desu ka?</div>
+                    <div class="english">where is the toilet?</div>
+                </div>
+                <button class="play-button" onclick="speak('トイレはどこですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">コンビニはどこですか？</div>
+                    <div class="romaji">konbini wa doko desu ka?</div>
+                    <div class="english">where is the convenience store?</div>
+                </div>
+                <button class="play-button" onclick="speak('コンビニはどこですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">この電車は東京に行きますか？</div>
+                    <div class="romaji">kono densha wa tōkyō ni ikimasu ka?</div>
+                    <div class="english">does this train go to Tokyo?</div>
+                </div>
+                <button class="play-button" onclick="speak('この電車は東京に行きますか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ここから遠いですか？</div>
+                    <div class="romaji">koko kara tōi desu ka?</div>
+                    <div class="english">is it far from here?</div>
+                </div>
+                <button class="play-button" onclick="speak('ここから遠いですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">歩いて行けますか？</div>
+                    <div class="romaji">aruite ikemasu ka?</div>
+                    <div class="english">can I walk there?</div>
+                </div>
+                <button class="play-button" onclick="speak('歩いて行けますか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">地図を見せてください</div>
+                    <div class="romaji">chizu wo misete kudasai</div>
+                    <div class="english">please show me the map</div>
+                </div>
+                <button class="play-button" onclick="speak('地図を見せてください', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <!-- SHOPPING -->
+        <div class="category-header">
+            <span class="icon">🛍️</span> Shopping
+        </div>
+
+        <div class="section">
+            <div class="section-title">In Stores</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">これをお願いします</div>
+                    <div class="romaji">kore wo onegaishimasu</div>
+                    <div class="english">this one, please</div>
+                </div>
+                <button class="play-button" onclick="speak('これをお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">いくらですか？</div>
+                    <div class="romaji">ikura desu ka?</div>
+                    <div class="english">how much is it?</div>
+                </div>
+                <button class="play-button" onclick="speak('いくらですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">高すぎます</div>
+                    <div class="romaji">takasugimasu</div>
+                    <div class="english">too expensive</div>
+                </div>
+                <button class="play-button" onclick="speak('高すぎます', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">安くしてください</div>
+                    <div class="romaji">yasuku shite kudasai</div>
+                    <div class="english">please give me a discount</div>
+                </div>
+                <button class="play-button" onclick="speak('安くしてください', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ちょっと見るだけです</div>
+                    <div class="romaji">chotto miru dake desu</div>
+                    <div class="english">just looking</div>
+                </div>
+                <button class="play-button" onclick="speak('ちょっと見るだけです', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">試着してもいいですか？</div>
+                    <div class="romaji">shichaku shite mo ii desu ka?</div>
+                    <div class="english">can I try it on?</div>
+                </div>
+                <button class="play-button" onclick="speak('試着してもいいですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">袋をください</div>
+                    <div class="romaji">fukuro wo kudasai</div>
+                    <div class="english">please give me a bag</div>
+                </div>
+                <button class="play-button" onclick="speak('袋をください', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">クレジットカードは使えますか？</div>
+                    <div class="romaji">kurejitto kādo wa tsukaemasu ka?</div>
+                    <div class="english">can I use a credit card?</div>
+                </div>
+                <button class="play-button" onclick="speak('クレジットカードは使えますか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">レシートをください</div>
+                    <div class="romaji">reshīto wo kudasai</div>
+                    <div class="english">please give me a receipt</div>
+                </div>
+                <button class="play-button" onclick="speak('レシートをください', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <!-- BUYING SNACKS -->
+        <div class="category-header">
+            <span class="icon">🍡</span> Buying Snacks & Drinks
+        </div>
+
+        <div class="section">
+            <div class="section-title">Convenience Store & Snacks</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">これと、これをお願いします</div>
+                    <div class="romaji">kore to, kore wo onegaishimasu</div>
+                    <div class="english">this and this, please</div>
+                </div>
+                <button class="play-button" onclick="speak('これと、これをお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">温めてください</div>
+                    <div class="romaji">atatamete kudasai</div>
+                    <div class="english">please heat it up (microwave)</div>
+                </div>
+                <button class="play-button" onclick="speak('温めてください', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">お箸をください</div>
+                    <div class="romaji">ohashi wo kudasai</div>
+                    <div class="english">please give me chopsticks</div>
+                </div>
+                <button class="play-button" onclick="speak('お箸をください', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">フォークをください</div>
+                    <div class="romaji">fōku wo kudasai</div>
+                    <div class="english">please give me a fork</div>
+                </div>
+                <button class="play-button" onclick="speak('フォークをください', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ストローをください</div>
+                    <div class="romaji">sutorō wo kudasai</div>
+                    <div class="english">please give me a straw</div>
+                </div>
+                <button class="play-button" onclick="speak('ストローをください', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">別々にしてください</div>
+                    <div class="romaji">betsubetsu ni shite kudasai</div>
+                    <div class="english">please separate them (into different bags)</div>
+                </div>
+                <button class="play-button" onclick="speak('別々にしてください', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <!-- FOOD INGREDIENTS -->
+        <div class="category-header">
+            <span class="icon">🥘</span> Food Ingredients & Basic Terms
+        </div>
+
+        <div class="section">
+            <div class="section-title">Proteins & Main Ingredients</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">肉</div>
+                    <div class="romaji">niku</div>
+                    <div class="english">meat</div>
+                </div>
+                <button class="play-button" onclick="speak('にく', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">牛肉</div>
+                    <div class="romaji">gyūniku</div>
+                    <div class="english">beef</div>
+                </div>
+                <button class="play-button" onclick="speak('牛肉', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">豚肉</div>
+                    <div class="romaji">butaniku</div>
+                    <div class="english">pork</div>
+                </div>
+                <button class="play-button" onclick="speak('豚肉', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">鶏肉</div>
+                    <div class="romaji">toriniku</div>
+                    <div class="english">chicken</div>
+                </div>
+                <button class="play-button" onclick="speak('鶏肉', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">魚</div>
+                    <div class="romaji">sakana</div>
+                    <div class="english">fish</div>
+                </div>
+                <button class="play-button" onclick="speak('さかな', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">うなぎ</div>
+                    <div class="romaji">unagi</div>
+                    <div class="english">eel</div>
+                </div>
+                <button class="play-button" onclick="speak('うなぎ', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">エビ</div>
+                    <div class="romaji">ebi</div>
+                    <div class="english">shrimp/prawn</div>
+                </div>
+                <button class="play-button" onclick="speak('エビ', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">タコ</div>
+                    <div class="romaji">tako</div>
+                    <div class="english">octopus</div>
+                </div>
+                <button class="play-button" onclick="speak('タコ', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">イカ</div>
+                    <div class="romaji">ika</div>
+                    <div class="english">squid</div>
+                </div>
+                <button class="play-button" onclick="speak('イカ', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">卵</div>
+                    <div class="romaji">tamago</div>
+                    <div class="english">egg</div>
+                </div>
+                <button class="play-button" onclick="speak('たまご', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">野菜</div>
+                    <div class="romaji">yasai</div>
+                    <div class="english">vegetables</div>
+                </div>
+                <button class="play-button" onclick="speak('野菜', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Common Vegetables</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">きのこ</div>
+                    <div class="romaji">kinoko</div>
+                    <div class="english">mushroom</div>
+                </div>
+                <button class="play-button" onclick="speak('きのこ', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ねぎ</div>
+                    <div class="romaji">negi</div>
+                    <div class="english">green onion/scallion</div>
+                </div>
+                <button class="play-button" onclick="speak('ねぎ', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">もやし</div>
+                    <div class="romaji">moyashi</div>
+                    <div class="english">bean sprouts</div>
+                </div>
+                <button class="play-button" onclick="speak('もやし', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">キャベツ</div>
+                    <div class="romaji">kyabetsu</div>
+                    <div class="english">cabbage</div>
+                </div>
+                <button class="play-button" onclick="speak('キャベツ', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">にんじん</div>
+                    <div class="romaji">ninjin</div>
+                    <div class="english">carrot</div>
+                </div>
+                <button class="play-button" onclick="speak('にんじん', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Food Stall Ordering Phrases</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">〜が入っていますか？</div>
+                    <div class="romaji">~ ga haitte imasu ka?</div>
+                    <div class="english">does it have ~ in it?</div>
+                </div>
+                <button class="play-button" onclick="speak('が入っていますか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">〜抜きでお願いします</div>
+                    <div class="romaji">~ nuki de onegaishimasu</div>
+                    <div class="english">without ~, please</div>
+                </div>
+                <button class="play-button" onclick="speak('抜きでお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">〜多めでお願いします</div>
+                    <div class="romaji">~ ōme de onegaishimasu</div>
+                    <div class="english">extra ~, please (more ~)</div>
+                </div>
+                <button class="play-button" onclick="speak('多めでお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">これは何ですか？</div>
+                    <div class="romaji">kore wa nan desu ka?</div>
+                    <div class="english">what is this?</div>
+                </div>
+                <button class="play-button" onclick="speak('これは何ですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">辛いですか？</div>
+                    <div class="romaji">karai desu ka?</div>
+                    <div class="english">is it spicy?</div>
+                </div>
+                <button class="play-button" onclick="speak('辛いですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">辛くないのをお願いします</div>
+                    <div class="romaji">karakunai no wo onegaishimasu</div>
+                    <div class="english">not spicy one, please</div>
+                </div>
+                <button class="play-button" onclick="speak('辛くないのをお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">一つください</div>
+                    <div class="romaji">hitotsu kudasai</div>
+                    <div class="english">one, please</div>
+                </div>
+                <button class="play-button" onclick="speak('一つください', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">二つください</div>
+                    <div class="romaji">futatsu kudasai</div>
+                    <div class="english">two, please</div>
+                </div>
+                <button class="play-button" onclick="speak('二つください', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">持ち帰りでお願いします</div>
+                    <div class="romaji">mochikaeri de onegaishimasu</div>
+                    <div class="english">to go, please (takeout)</div>
+                </div>
+                <button class="play-button" onclick="speak('持ち帰りでお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ここで食べます</div>
+                    <div class="romaji">koko de tabemasu</div>
+                    <div class="english">eat here (dine in)</div>
+                </div>
+                <button class="play-button" onclick="speak('ここで食べます', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <!-- RESTAURANT -->
+        <div class="category-header">
+            <span class="icon">🍜</span> Restaurant & Ordering Food
+        </div>
+
+        <div class="section">
+            <div class="section-title">Entering & Seating</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">二名です</div>
+                    <div class="romaji">nimei desu</div>
+                    <div class="english">party of two</div>
+                </div>
+                <button class="play-button" onclick="speak('二名です', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">三名です</div>
+                    <div class="romaji">sanmei desu</div>
+                    <div class="english">party of three</div>
+                </div>
+                <button class="play-button" onclick="speak('三名です', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">四名です</div>
+                    <div class="romaji">yonmei desu</div>
+                    <div class="english">party of four</div>
+                </div>
+                <button class="play-button" onclick="speak('四名です', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">禁煙席をお願いします</div>
+                    <div class="romaji">kin'en seki wo onegaishimasu</div>
+                    <div class="english">non-smoking seat, please</div>
+                </div>
+                <button class="play-button" onclick="speak('禁煙席をお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">予約していません</div>
+                    <div class="romaji">yoyaku shite imasen</div>
+                    <div class="english">I don't have a reservation</div>
+                </div>
+                <button class="play-button" onclick="speak('予約していません', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">メニューをお願いします</div>
+                    <div class="romaji">menyū wo onegaishimasu</div>
+                    <div class="english">menu, please</div>
+                </div>
+                <button class="play-button" onclick="speak('メニューをお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">英語のメニューはありますか？</div>
+                    <div class="romaji">eigo no menyū wa arimasu ka?</div>
+                    <div class="english">do you have an English menu?</div>
+                </div>
+                <button class="play-button" onclick="speak('英語のメニューはありますか', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Ordering</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">注文お願いします</div>
+                    <div class="romaji">chūmon onegaishimasu</div>
+                    <div class="english">I'd like to order, please</div>
+                </div>
+                <button class="play-button" onclick="speak('注文お願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">おすすめはどれですか？</div>
+                    <div class="romaji">osusume wa dore desu ka?</div>
+                    <div class="english">what do you recommend?</div>
+                </div>
+                <button class="play-button" onclick="speak('おすすめはどれですか', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">これをお願いします</div>
+                    <div class="romaji">kore wo onegaishimasu</div>
+                    <div class="english">this one, please</div>
+                </div>
+                <button class="play-button" onclick="speak('これをお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">同じものをお願いします</div>
+                    <div class="romaji">onaji mono wo onegaishimasu</div>
+                    <div class="english">same thing, please</div>
+                </div>
+                <button class="play-button" onclick="speak('同じものをお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">水をください</div>
+                    <div class="romaji">mizu wo kudasai</div>
+                    <div class="english">water, please</div>
+                </div>
+                <button class="play-button" onclick="speak('水をください', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ビールをお願いします</div>
+                    <div class="romaji">bīru wo onegaishimasu</div>
+                    <div class="english">beer, please</div>
+                </div>
+                <button class="play-button" onclick="speak('ビールをお願いします', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Specific Dishes - Ramen</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ラーメンをお願いします</div>
+                    <div class="romaji">rāmen wo onegaishimasu</div>
+                    <div class="english">ramen, please</div>
+                </div>
+                <button class="play-button" onclick="speak('ラーメンをお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">醤油ラーメン</div>
+                    <div class="romaji">shōyu rāmen</div>
+                    <div class="english">soy sauce ramen</div>
+                </div>
+                <button class="play-button" onclick="speak('醤油ラーメン', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">味噌ラーメン</div>
+                    <div class="romaji">miso rāmen</div>
+                    <div class="english">miso ramen</div>
+                </div>
+                <button class="play-button" onclick="speak('味噌ラーメン', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">豚骨ラーメン</div>
+                    <div class="romaji">tonkotsu rāmen</div>
+                    <div class="english">pork bone broth ramen</div>
+                </div>
+                <button class="play-button" onclick="speak('豚骨ラーメン', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">大盛りでお願いします</div>
+                    <div class="romaji">ōmori de onegaishimasu</div>
+                    <div class="english">large portion, please</div>
+                </div>
+                <button class="play-button" onclick="speak('大盛りでお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">麺硬めでお願いします</div>
+                    <div class="romaji">men katame de onegaishimasu</div>
+                    <div class="english">firm noodles, please</div>
+                </div>
+                <button class="play-button" onclick="speak('麺硬めでお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">替え玉お願いします</div>
+                    <div class="romaji">kaedama onegaishimasu</div>
+                    <div class="english">extra noodles, please (for ramen)</div>
+                </div>
+                <button class="play-button" onclick="speak('替え玉お願いします', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Specific Dishes - Sushi</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">寿司をお願いします</div>
+                    <div class="romaji">sushi wo onegaishimasu</div>
+                    <div class="english">sushi, please</div>
+                </div>
+                <button class="play-button" onclick="speak('寿司をお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">おまかせでお願いします</div>
+                    <div class="romaji">omakase de onegaishimasu</div>
+                    <div class="english">chef's choice, please</div>
+                </div>
+                <button class="play-button" onclick="speak('おまかせでお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">マグロ</div>
+                    <div class="romaji">maguro</div>
+                    <div class="english">tuna</div>
+                </div>
+                <button class="play-button" onclick="speak('マグロ', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">サーモン</div>
+                    <div class="romaji">sāmon</div>
+                    <div class="english">salmon</div>
+                </div>
+                <button class="play-button" onclick="speak('サーモン', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">エビ</div>
+                    <div class="romaji">ebi</div>
+                    <div class="english">shrimp</div>
+                </div>
+                <button class="play-button" onclick="speak('エビ', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">わさび抜きでお願いします</div>
+                    <div class="romaji">wasabi nuki de onegaishimasu</div>
+                    <div class="english">no wasabi, please</div>
+                </div>
+                <button class="play-button" onclick="speak('わさび抜きでお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">醤油をください</div>
+                    <div class="romaji">shōyu wo kudasai</div>
+                    <div class="english">soy sauce, please</div>
+                </div>
+                <button class="play-button" onclick="speak('醤油をください', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Specific Dishes - Wagyu & Yakiniku</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">和牛をお願いします</div>
+                    <div class="romaji">wagyū wo onegaishimasu</div>
+                    <div class="english">wagyu beef, please</div>
+                </div>
+                <button class="play-button" onclick="speak('和牛をお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">焼肉セット</div>
+                    <div class="romaji">yakiniku setto</div>
+                    <div class="english">grilled meat set</div>
+                </div>
+                <button class="play-button" onclick="speak('焼肉セット', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">カルビ</div>
+                    <div class="romaji">karubi</div>
+                    <div class="english">short ribs</div>
+                </div>
+                <button class="play-button" onclick="speak('カルビ', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ロース</div>
+                    <div class="romaji">rōsu</div>
+                    <div class="english">sirloin</div>
+                </div>
+                <button class="play-button" onclick="speak('ロース', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">レアでお願いします</div>
+                    <div class="romaji">rea de onegaishimasu</div>
+                    <div class="english">rare, please</div>
+                </div>
+                <button class="play-button" onclick="speak('レアでお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ミディアムでお願いします</div>
+                    <div class="romaji">midiamu de onegaishimasu</div>
+                    <div class="english">medium, please</div>
+                </div>
+                <button class="play-button" onclick="speak('ミディアムでお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ウェルダンでお願いします</div>
+                    <div class="romaji">werudan de onegaishimasu</div>
+                    <div class="english">well-done, please</div>
+                </div>
+                <button class="play-button" onclick="speak('ウェルダンでお願いします', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">During the Meal</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">いただきます</div>
+                    <div class="romaji">itadakimasu</div>
+                    <div class="english">let's eat (said before eating)</div>
+                </div>
+                <button class="play-button" onclick="speak('いただきます', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">とても美味しいです</div>
+                    <div class="romaji">totemo oishii desu</div>
+                    <div class="english">very delicious</div>
+                </div>
+                <button class="play-button" onclick="speak('とても美味しいです', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">お皿を交換してください</div>
+                    <div class="romaji">osara wo kōkan shite kudasai</div>
+                    <div class="english">please change my plate</div>
+                </div>
+                <button class="play-button" onclick="speak('お皿を交換してください', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">もう一つお願いします</div>
+                    <div class="romaji">mō hitotsu onegaishimasu</div>
+                    <div class="english">one more, please</div>
+                </div>
+                <button class="play-button" onclick="speak('もう一つお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">お腹いっぱいです</div>
+                    <div class="romaji">onaka ippai desu</div>
+                    <div class="english">I'm full</div>
+                </div>
+                <button class="play-button" onclick="speak('お腹いっぱいです', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Paying the Bill</div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">お会計お願いします</div>
+                    <div class="romaji">okaikei onegaishimasu</div>
+                    <div class="english">check, please</div>
+                </div>
+                <button class="play-button" onclick="speak('お会計お願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">別々でお願いします</div>
+                    <div class="romaji">betsubetsu de onegaishimasu</div>
+                    <div class="english">separate checks, please</div>
+                </div>
+                <button class="play-button" onclick="speak('別々でお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">一緒でお願いします</div>
+                    <div class="romaji">issho de onegaishimasu</div>
+                    <div class="english">together, please (one check)</div>
+                </div>
+                <button class="play-button" onclick="speak('一緒でお願いします', 'ja-JP')">▶</button>
+            </div>
+
+            <div class="phrase-card">
+                <div class="phrase-content">
+                    <div class="japanese">ごちそうさまでした</div>
+                    <div class="romaji">gochisōsama deshita</div>
+                    <div class="english">thank you for the meal (said after eating)</div>
+                </div>
+                <button class="play-button" onclick="speak('ごちそうさまでした', 'ja-JP')">▶</button>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <strong>💡 Dining Etiquette Tips:</strong>
+            • Say "itadakimasu" before eating and "gochisōsama deshita" after
+            • Don't tip - it's not customary in Japan
+            • Many places require you to pay at the register (not at the table)
+            • Slurping noodles is perfectly acceptable and even encouraged!
+        </div>
+
+        <div class="note">
+            <strong>📱 Note:</strong> This page uses your browser's built-in text-to-speech feature.
+            For best results, use Chrome or Edge with Japanese language support installed.
+        </div>
+
+        <div class="footer">
+            Click the play button (▶) to hear pronunciation • Practice makes perfect! • 頑張ってください！(Ganbatte kudasai - Good luck!)
+        </div>
+    </div>
+
+    <script>
+        function speak(text, lang) {
+            // Cancel any ongoing speech
+            window.speechSynthesis.cancel();
+
+            // Create a new speech utterance
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = lang;
+            utterance.rate = 0.85;
+            utterance.pitch = 1;
+            utterance.volume = 1;
+
+            // Find the button that was clicked
+            const button = event.target;
+            button.classList.add('playing');
+
+            // Remove playing class when done
+            utterance.onend = function() {
+                button.classList.remove('playing');
+            };
+
+            utterance.onerror = function() {
+                button.classList.remove('playing');
+                alert('Speech synthesis failed. Make sure your browser supports Japanese text-to-speech.');
+            };
+
+            // Speak the text
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // Check if speech synthesis is available
+        if (!('speechSynthesis' in window)) {
+            alert('Your browser does not support text-to-speech. Please use Chrome, Edge, or Safari.');
+        }
+    </script>
+</body>
+</html>

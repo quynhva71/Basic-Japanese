@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Learning Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            padding: 50px 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: #999;
+            font-style: italic;
+            margin-top: 15px;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-title {
+            font-size: 1.4em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-description {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .special-cards {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 2px solid #eee;
+        }
+
+        .special-cards h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+
+        .highlight-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .highlight-card .card-title,
+        .highlight-card .card-description {
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+            color: #666;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .section-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🇯🇵 Japanese Learning Hub</h1>
+            <p class="subtitle">Your complete guide to speaking Japanese</p>
+            <p class="tagline">Interactive phrases with audio pronunciation</p>
+        </div>
+
+        <div class="section-grid">
+            <a href="basics.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">👋</div>
+                    <div class="card-title">Basic Phrases</div>
+                    <div class="card-description">Greetings, politeness, and essential expressions for any situation</div>
+                </div>
+            </a>
+
+            <a href="numbers.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">🔢</div>
+                    <div class="card-title">Numbers</div>
+                    <div class="card-description">Count from 1-10 and learn essential number phrases</div>
+                </div>
+            </a>
+
+            <a href="conversation.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">💬</div>
+                    <div class="card-title">Basic Conversation</div>
+                    <div class="card-description">Yes, no, I don't understand, and communication essentials</div>
+                </div>
+            </a>
+
+            <a href="directions.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">🗺️</div>
+                    <div class="card-title">Directions</div>
+                    <div class="card-description">Find stations, toilets, and navigate transportation</div>
+                </div>
+            </a>
+
+            <a href="shopping.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">🛍️</div>
+                    <div class="card-title">Shopping</div>
+                    <div class="card-description">Prices, sizes, payment, and store browsing phrases</div>
+                </div>
+            </a>
+
+            <a href="food-ingredients.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">🥘</div>
+                    <div class="card-title">Food Ingredients</div>
+                    <div class="card-description">Meat, fish, vegetables, and ingredient terms</div>
+                </div>
+            </a>
+
+            <a href="restaurant.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">🍜</div>
+                    <div class="card-title">At a Restaurant</div>
+                    <div class="card-description">Ordering ramen, sushi, wagyu, and restaurant etiquette</div>
+                </div>
+            </a>
+
+            <a href="food-stalls.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">🍢</div>
+                    <div class="card-title">Food Stalls</div>
+                    <div class="card-description">Street food ordering, snacks, and quick bites</div>
+                </div>
+            </a>
+
+            <a href="taxi.html" class="card-link">
+                <div class="card">
+                    <div class="card-icon">🚕</div>
+                    <div class="card-title">Taxi</div>
+                    <div class="card-description">Getting a taxi, giving directions, and paying</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="special-cards">
+            <h2>Structured Learning Programs</h2>
+            <div class="section-grid">
+                <a href="japanese_phrases.html" class="card-link">
+                    <div class="card highlight-card">
+                        <div class="card-icon">📅</div>
+                        <div class="card-title">21-Day Speaking Plan</div>
+                        <div class="card-description">Day-by-day structured program to build conversational confidence</div>
+                    </div>
+                </a>
+
+                <a href="japan_travel_phrases.html" class="card-link">
+                    <div class="card highlight-card">
+                        <div class="card-icon">✈️</div>
+                        <div class="card-title">Complete Travel Guide</div>
+                        <div class="card-description">All phrases in one comprehensive reference page</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>💡 Pro Tip:</strong> Add this page to your phone's home screen for quick access!</p>
+            <p style="margin-top: 15px; color: #999; font-size: 0.9em;">
+                Click any card to start learning • Audio pronunciation available on all phrases
+            </p>
+            <div class="footer-links">
+                <a href="https://github.com/quynhva71/Basic-Japanese" target="_blank">GitHub</a>
+                <a href="README.md">About</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

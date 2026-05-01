@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Phrases - Japanese Learning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .back-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .back-button:hover {
+            background: #5568d3;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2em;
+        }
+
+        .phrase-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .phrase-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .phrase-content {
+            flex: 1;
+        }
+
+        .japanese {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .romaji {
+            font-size: 1em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .english {
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .play-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+        .play-button.playing {
+            opacity: 0.6;
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            color: #667eea;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-button">← Back</a>
+            <h1>👋 Basic Phrases</h1>
+        </div>
+
+        <div class="section-title">Greetings</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">おはようございます</div>
+                <div class="romaji">ohayō gozaimasu</div>
+                <div class="english">good morning</div>
+            </div>
+            <button class="play-button" onclick="speak('おはようございます', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">こんにちは</div>
+                <div class="romaji">konnichiwa</div>
+                <div class="english">hello / good afternoon</div>
+            </div>
+            <button class="play-button" onclick="speak('こんにちは', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">こんばんは</div>
+                <div class="romaji">konbanwa</div>
+                <div class="english">good evening</div>
+            </div>
+            <button class="play-button" onclick="speak('こんばんは', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">おやすみなさい</div>
+                <div class="romaji">oyasuminasai</div>
+                <div class="english">good night</div>
+            </div>
+            <button class="play-button" onclick="speak('おやすみなさい', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">さようなら</div>
+                <div class="romaji">sayōnara</div>
+                <div class="english">goodbye</div>
+            </div>
+            <button class="play-button" onclick="speak('さようなら', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">またね</div>
+                <div class="romaji">mata ne</div>
+                <div class="english">see you later (casual)</div>
+            </div>
+            <button class="play-button" onclick="speak('またね', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="section-title">Essential Politeness</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">すみません</div>
+                <div class="romaji">sumimasen</div>
+                <div class="english">excuse me / sorry</div>
+            </div>
+            <button class="play-button" onclick="speak('すみません', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">ありがとうございます</div>
+                <div class="romaji">arigatō gozaimasu</div>
+                <div class="english">thank you</div>
+            </div>
+            <button class="play-button" onclick="speak('ありがとうございます', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">どういたしまして</div>
+                <div class="romaji">dō itashimashite</div>
+                <div class="english">you're welcome</div>
+            </div>
+            <button class="play-button" onclick="speak('どういたしまして', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">お願いします</div>
+                <div class="romaji">onegaishimasu</div>
+                <div class="english">please</div>
+            </div>
+            <button class="play-button" onclick="speak('お願いします', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">ごめんなさい</div>
+                <div class="romaji">gomen nasai</div>
+                <div class="english">I'm sorry</div>
+            </div>
+            <button class="play-button" onclick="speak('ごめんなさい', 'ja-JP')">▶</button>
+        </div>
+    </div>
+
+    <script>
+        function speak(text, lang) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = lang;
+            utterance.rate = 0.85;
+            utterance.pitch = 1;
+            utterance.volume = 1;
+
+            const button = event.target;
+            button.classList.add('playing');
+
+            utterance.onend = function() {
+                button.classList.remove('playing');
+            };
+
+            utterance.onerror = function() {
+                button.classList.remove('playing');
+            };
+
+            window.speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>

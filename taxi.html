@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi - Japanese Learning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .back-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .back-button:hover {
+            background: #5568d3;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2em;
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            color: #667eea;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            font-weight: 600;
+        }
+
+        .phrase-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .phrase-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .phrase-content {
+            flex: 1;
+        }
+
+        .japanese {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .romaji {
+            font-size: 1em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .english {
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .play-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+        .play-button.playing {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-button">← Back</a>
+            <h1>🚕 Taking a Taxi</h1>
+        </div>
+
+        <div class="section-title">Getting a Taxi</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">タクシーをお願いします</div>
+                <div class="romaji">takushī wo onegaishimasu</div>
+                <div class="english">taxi, please</div>
+            </div>
+            <button class="play-button" onclick="speak('タクシーをお願いします', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">タクシー乗り場はどこですか？</div>
+                <div class="romaji">takushī noriba wa doko desu ka?</div>
+                <div class="english">where is the taxi stand?</div>
+            </div>
+            <button class="play-button" onclick="speak('タクシー乗り場はどこですか', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">タクシーを呼んでください</div>
+                <div class="romaji">takushī wo yonde kudasai</div>
+                <div class="english">please call a taxi</div>
+            </div>
+            <button class="play-button" onclick="speak('タクシーを呼んでください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="section-title">Giving Directions</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">〜までお願いします</div>
+                <div class="romaji">~ made onegaishimasu</div>
+                <div class="english">to ~, please</div>
+            </div>
+            <button class="play-button" onclick="speak('までお願いします', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">東京駅までお願いします</div>
+                <div class="romaji">tōkyō eki made onegaishimasu</div>
+                <div class="english">to Tokyo Station, please</div>
+            </div>
+            <button class="play-button" onclick="speak('東京駅までお願いします', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">この住所までお願いします</div>
+                <div class="romaji">kono jūsho made onegaishimasu</div>
+                <div class="english">to this address, please</div>
+            </div>
+            <button class="play-button" onclick="speak('この住所までお願いします', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">このホテルまでお願いします</div>
+                <div class="romaji">kono hoteru made onegaishimasu</div>
+                <div class="english">to this hotel, please</div>
+            </div>
+            <button class="play-button" onclick="speak('このホテルまでお願いします', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">空港までお願いします</div>
+                <div class="romaji">kūkō made onegaishimasu</div>
+                <div class="english">to the airport, please</div>
+            </div>
+            <button class="play-button" onclick="speak('空港までお願いします', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="section-title">During the Ride</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">まっすぐ行ってください</div>
+                <div class="romaji">massugu itte kudasai</div>
+                <div class="english">go straight, please</div>
+            </div>
+            <button class="play-button" onclick="speak('まっすぐ行ってください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">右に曲がってください</div>
+                <div class="romaji">migi ni magatte kudasai</div>
+                <div class="english">turn right, please</div>
+            </div>
+            <button class="play-button" onclick="speak('右に曲がってください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">左に曲がってください</div>
+                <div class="romaji">hidari ni magatte kudasai</div>
+                <div class="english">turn left, please</div>
+            </div>
+            <button class="play-button" onclick="speak('左に曲がってください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">ここで止めてください</div>
+                <div class="romaji">koko de tomete kudasai</div>
+                <div class="english">stop here, please</div>
+            </div>
+            <button class="play-button" onclick="speak('ここで止めてください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">次の角で止めてください</div>
+                <div class="romaji">tsugi no kado de tomete kudasai</div>
+                <div class="english">stop at the next corner, please</div>
+            </div>
+            <button class="play-button" onclick="speak('次の角で止めてください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">ゆっくり行ってください</div>
+                <div class="romaji">yukkuri itte kudasai</div>
+                <div class="english">go slowly, please</div>
+            </div>
+            <button class="play-button" onclick="speak('ゆっくり行ってください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">急いでください</div>
+                <div class="romaji">isoide kudasai</div>
+                <div class="english">please hurry</div>
+            </div>
+            <button class="play-button" onclick="speak('急いでください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="section-title">Questions</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">どのくらいかかりますか？</div>
+                <div class="romaji">dono kurai kakarimasu ka?</div>
+                <div class="english">how long will it take?</div>
+            </div>
+            <button class="play-button" onclick="speak('どのくらいかかりますか', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">いくらかかりますか？</div>
+                <div class="romaji">ikura kakarimasu ka?</div>
+                <div class="english">how much will it cost?</div>
+            </div>
+            <button class="play-button" onclick="speak('いくらかかりますか', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">領収書をください</div>
+                <div class="romaji">ryōshūsho wo kudasai</div>
+                <div class="english">receipt, please</div>
+            </div>
+            <button class="play-button" onclick="speak('領収書をください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="section-title">Payment</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">クレジットカードで払えますか？</div>
+                <div class="romaji">kurejitto kādo de haraemasu ka?</div>
+                <div class="english">can I pay with credit card?</div>
+            </div>
+            <button class="play-button" onclick="speak('クレジットカードで払えますか', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">現金で払います</div>
+                <div class="romaji">genkin de haraimasu</div>
+                <div class="english">I'll pay with cash</div>
+            </div>
+            <button class="play-button" onclick="speak('現金で払います', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">お釣りは取っておいてください</div>
+                <div class="romaji">otsuri wa totte oite kudasai</div>
+                <div class="english">keep the change</div>
+            </div>
+            <button class="play-button" onclick="speak('お釣りは取っておいてください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="section-title">Other Requests</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">トランクを開けてください</div>
+                <div class="romaji">toranku wo akete kudasai</div>
+                <div class="english">please open the trunk</div>
+            </div>
+            <button class="play-button" onclick="speak('トランクを開けてください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">エアコンをつけてください</div>
+                <div class="romaji">eakon wo tsukete kudasai</div>
+                <div class="english">please turn on the air conditioning</div>
+            </div>
+            <button class="play-button" onclick="speak('エアコンをつけてください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">ちょっと待ってください</div>
+                <div class="romaji">chotto matte kudasai</div>
+                <div class="english">please wait a moment</div>
+            </div>
+            <button class="play-button" onclick="speak('ちょっと待ってください', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">ここで待っていてください</div>
+                <div class="romaji">koko de matte ite kudasai</div>
+                <div class="english">please wait here</div>
+            </div>
+            <button class="play-button" onclick="speak('ここで待っていてください', 'ja-JP')">▶</button>
+        </div>
+    </div>
+
+    <script>
+        function speak(text, lang) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = lang;
+            utterance.rate = 0.85;
+            utterance.pitch = 1;
+            utterance.volume = 1;
+
+            const button = event.target;
+            button.classList.add('playing');
+
+            utterance.onend = function() {
+                button.classList.remove('playing');
+            };
+
+            utterance.onerror = function() {
+                button.classList.remove('playing');
+            };
+
+            window.speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>

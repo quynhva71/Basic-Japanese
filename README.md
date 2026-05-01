@@ -1,22 +1,43 @@
-# 🇯🇵 Japanese Learning Resources
+# 🇯🇵 Japanese Learning Hub
 
 Interactive Japanese phrase guides with audio pronunciation for travelers and learners.
 
+## 🚀 Quick Start
+
+**New to Japanese?** Start here: [`21_day_japanese_phrases.html`](21_day_japanese_phrases.html)
+
+This is your fast-track introduction with the most essential phrases organized by day. Perfect for travelers with limited time!
+
 ## 📚 Contents
 
-This repository contains two comprehensive HTML guides:
+This repository contains multiple learning resources:
 
-### 1. **21-Day Japanese Speaking Plan** (`21_day_japanese_phrases.html`)
-A structured 21-day program to build conversational confidence in Japanese.
+### 1. **21-Day Quick Start** (`21_day_japanese_phrases.html`) ⭐ START HERE
+Your fastest path to speaking Japanese! A structured 21-day program with daily practice goals.
 
 - **Week 1:** Survival Confidence (Days 1-7)
 - **Week 2:** Daily Life & Movement (Days 8-14)
 - **Week 3:** Confidence & Natural Flow (Days 15-21)
 
-Perfect for: Learning Japanese systematically with daily practice goals.
+Perfect for: First-time learners and travelers preparing for a trip.
 
-### 2. **Japanese Travel Phrases** (`japan_travel_phrases.html`)
-Essential phrases organized by real-world travel situations.
+### 2. **Organized by Topic** (via `index.html`)
+Interactive learning hub with phrases grouped by situation:
+
+- 👋 Basic Phrases - Greetings & politeness
+- 🔢 Numbers - Counting 1-10
+- 💬 Basic Conversation - Yes, no, help phrases
+- 🗺️ Directions - Finding stations, toilets, destinations
+- 🛍️ Shopping - Prices, payment, browsing
+- 🥘 Food Ingredients - Meat, fish, vegetables
+- 🍜 At a Restaurant - Ordering ramen, sushi, wagyu
+- 🍢 Food Stalls - Street food ordering
+- 🚕 Taxi - Getting around, directions
+
+Perfect for: Topic-focused learning and quick reference.
+
+### 3. **Complete Travel Guide** (`japan_travel_phrases.html`)
+All phrases in one comprehensive reference page.
 
 **Categories:**
 - 👋 Greetings & Basic Politeness
@@ -58,9 +79,13 @@ Perfect for: Quick reference while traveling in Japan.
 ### Via GitHub Pages (Recommended):
 Access the live version at:
 ```
-https://[your-username].github.io/japanese-phrases/japanese_phrases.html
-https://[your-username].github.io/japanese-phrases/japan_travel_phrases.html
+https://quynhva71.github.io/Basic-Japanese/Utils/index.html
 ```
+
+**Quick Links:**
+- 🚀 Quick Start: `https://quynhva71.github.io/Basic-Japanese/Utils/21_day_japanese_phrases.html`
+- 🏠 Learning Hub: `https://quynhva71.github.io/Basic-Japanese/Utils/index.html`
+- 📖 Complete Guide: `https://quynhva71.github.io/Basic-Japanese/Utils/japan_travel_phrases.html`
 
 ## 🔊 Audio Requirements
 
@@ -75,14 +100,22 @@ The audio uses your browser's built-in Text-to-Speech (TTS) feature.
 
 ## 📖 Learning Tips
 
-### For the 21-Day Plan:
+### For the 21-Day Quick Start:
+- Start on Day 1 and work through sequentially
 - Practice each day's phrases 3-5 times
 - Say them out loud, not just listen
 - Focus on one day at a time
 - Repeat previous days as needed
+- Complete all 21 days for solid foundation
+
+### For Topic-Based Learning (via index.html):
+- Pick the topics most relevant to your trip
+- Practice common scenarios (restaurant, taxi, shopping)
+- Bookmark the landing page for quick access
+- Use the back buttons to navigate between topics
 
 ### For Travel Phrases:
-- Bookmark frequently used sections
+- Use as a comprehensive reference
 - Practice ordering food before your trip
 - Learn greetings and basic politeness first
 - Use pointing + "これをお願いします" (kore wo onegaishimasu) when unsure
