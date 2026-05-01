@@ -209,6 +209,31 @@
             line-height: 1.5;
         }
 
+        .power-phrase-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .power-phrase-button:hover {
+            transform: scale(1.1);
+        }
+
+        .power-phrase-button.playing {
+            opacity: 0.6;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 30px 20px;
@@ -363,6 +388,7 @@
             <div class="tip">
                 This phrase instantly makes people slower, kinder, and more helpful. Use it liberally when traveling!
             </div>
+            <button class="power-phrase-button" onclick="speak('すみません、日本語は少しだけです', 'ja-JP')">▶</button>
         </div>
 
         <div class="footer">
@@ -376,5 +402,29 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function speak(text, lang) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = lang;
+            utterance.rate = 0.85;
+            utterance.pitch = 1;
+            utterance.volume = 1;
+
+            const button = event.target;
+            button.classList.add('playing');
+
+            utterance.onend = function() {
+                button.classList.remove('playing');
+            };
+
+            utterance.onerror = function() {
+                button.classList.remove('playing');
+            };
+
+            window.speechSynthesis.speak(utterance);
+        }
+    </script>
 </body>
 </html>
