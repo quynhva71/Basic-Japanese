@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signs & Symbols - Japanese Learning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .back-button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .back-button:hover {
+            background: #5568d3;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2em;
+        }
+
+        .section-title {
+            font-size: 1.3em;
+            color: #667eea;
+            margin: 30px 0 15px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            font-weight: 600;
+        }
+
+        .phrase-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .phrase-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .phrase-content {
+            flex: 1;
+        }
+
+        .japanese {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .romaji {
+            font-size: 1em;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .english {
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        .play-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+        }
+
+        .play-button.playing {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-button">← Back</a>
+            <h1>🚻 Signs & Symbols</h1>
+        </div>
+
+        <div class="section-title">Restrooms</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">男</div>
+                <div class="romaji">otoko</div>
+                <div class="english">men / male</div>
+            </div>
+            <button class="play-button" onclick="speak('おとこ', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">女</div>
+                <div class="romaji">onna</div>
+                <div class="english">women / female</div>
+            </div>
+            <button class="play-button" onclick="speak('おんな', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">男性</div>
+                <div class="romaji">dansei</div>
+                <div class="english">men (formal)</div>
+            </div>
+            <button class="play-button" onclick="speak('だんせい', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">女性</div>
+                <div class="romaji">josei</div>
+                <div class="english">women (formal)</div>
+            </div>
+            <button class="play-button" onclick="speak('じょせい', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">トイレ</div>
+                <div class="romaji">toire</div>
+                <div class="english">toilet / restroom</div>
+            </div>
+            <button class="play-button" onclick="speak('トイレ', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">お手洗い</div>
+                <div class="romaji">otearai</div>
+                <div class="english">restroom (polite)</div>
+            </div>
+            <button class="play-button" onclick="speak('お手洗い', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="section-title">Entrance & Exit</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">入口</div>
+                <div class="romaji">iriguchi</div>
+                <div class="english">entrance</div>
+            </div>
+            <button class="play-button" onclick="speak('いりぐち', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">出口</div>
+                <div class="romaji">deguchi</div>
+                <div class="english">exit</div>
+            </div>
+            <button class="play-button" onclick="speak('でぐち', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">非常口</div>
+                <div class="romaji">hijōguchi</div>
+                <div class="english">emergency exit</div>
+            </div>
+            <button class="play-button" onclick="speak('ひじょうぐち', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">押す</div>
+                <div class="romaji">osu</div>
+                <div class="english">push</div>
+            </div>
+            <button class="play-button" onclick="speak('おす', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">引く</div>
+                <div class="romaji">hiku</div>
+                <div class="english">pull</div>
+            </div>
+            <button class="play-button" onclick="speak('ひく', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="section-title">Store Status</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">営業中</div>
+                <div class="romaji">eigyōchū</div>
+                <div class="english">open / in business</div>
+            </div>
+            <button class="play-button" onclick="speak('えいぎょうちゅう', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">準備中</div>
+                <div class="romaji">junbichū</div>
+                <div class="english">preparing / not open yet</div>
+            </div>
+            <button class="play-button" onclick="speak('じゅんびちゅう', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">閉店</div>
+                <div class="romaji">heiten</div>
+                <div class="english">closed</div>
+            </div>
+            <button class="play-button" onclick="speak('へいてん', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">定休日</div>
+                <div class="romaji">teikyūbi</div>
+                <div class="english">regular holiday / closed day</div>
+            </div>
+            <button class="play-button" onclick="speak('ていきゅうび', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">売り切れ</div>
+                <div class="romaji">urikire</div>
+                <div class="english">sold out</div>
+            </div>
+            <button class="play-button" onclick="speak('うりきれ', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">完売</div>
+                <div class="romaji">kanbai</div>
+                <div class="english">sold out (all gone)</div>
+            </div>
+            <button class="play-button" onclick="speak('かんばい', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">満席</div>
+                <div class="romaji">manseki</div>
+                <div class="english">full / no seats available</div>
+            </div>
+            <button class="play-button" onclick="speak('まんせき', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="section-title">On & Off</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">入</div>
+                <div class="romaji">iri / ON</div>
+                <div class="english">on (switch)</div>
+            </div>
+            <button class="play-button" onclick="speak('いり', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">切</div>
+                <div class="romaji">kiri / OFF</div>
+                <div class="english">off (switch)</div>
+            </div>
+            <button class="play-button" onclick="speak('きり', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="section-title">Prohibitions & Warnings</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">禁煙</div>
+                <div class="romaji">kin'en</div>
+                <div class="english">no smoking</div>
+            </div>
+            <button class="play-button" onclick="speak('きんえん', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">喫煙</div>
+                <div class="romaji">kitsuen</div>
+                <div class="english">smoking allowed</div>
+            </div>
+            <button class="play-button" onclick="speak('きつえん', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">立入禁止</div>
+                <div class="romaji">tachiiri kinshi</div>
+                <div class="english">no entry / keep out</div>
+            </div>
+            <button class="play-button" onclick="speak('たちいりきんし', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">撮影禁止</div>
+                <div class="romaji">satsuei kinshi</div>
+                <div class="english">no photography</div>
+            </div>
+            <button class="play-button" onclick="speak('さつえいきんし', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">危険</div>
+                <div class="romaji">kiken</div>
+                <div class="english">danger</div>
+            </div>
+            <button class="play-button" onclick="speak('きけん', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">注意</div>
+                <div class="romaji">chūi</div>
+                <div class="english">caution / attention</div>
+            </div>
+            <button class="play-button" onclick="speak('ちゅうい', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="section-title">Common Places</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">駅</div>
+                <div class="romaji">eki</div>
+                <div class="english">station</div>
+            </div>
+            <button class="play-button" onclick="speak('えき', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">改札口</div>
+                <div class="romaji">kaisatsuguchi</div>
+                <div class="english">ticket gate</div>
+            </div>
+            <button class="play-button" onclick="speak('かいさつぐち', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">券売機</div>
+                <div class="romaji">kenbaiki</div>
+                <div class="english">ticket machine</div>
+            </div>
+            <button class="play-button" onclick="speak('けんばいき', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">案内所</div>
+                <div class="romaji">annaijo</div>
+                <div class="english">information</div>
+            </div>
+            <button class="play-button" onclick="speak('あんないじょ', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">受付</div>
+                <div class="romaji">uketsuke</div>
+                <div class="english">reception / front desk</div>
+            </div>
+            <button class="play-button" onclick="speak('うけつけ', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">会計</div>
+                <div class="romaji">kaikei</div>
+                <div class="english">cashier / payment</div>
+            </div>
+            <button class="play-button" onclick="speak('かいけい', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="section-title">Floors & Elevators</div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">1階</div>
+                <div class="romaji">ikkai</div>
+                <div class="english">1st floor / ground floor</div>
+            </div>
+            <button class="play-button" onclick="speak('いっかい', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">2階</div>
+                <div class="romaji">nikai</div>
+                <div class="english">2nd floor</div>
+            </div>
+            <button class="play-button" onclick="speak('にかい', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">地下</div>
+                <div class="romaji">chika</div>
+                <div class="english">basement / underground</div>
+            </div>
+            <button class="play-button" onclick="speak('ちか', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">屋上</div>
+                <div class="romaji">okujō</div>
+                <div class="english">rooftop</div>
+            </div>
+            <button class="play-button" onclick="speak('おくじょう', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">エレベーター</div>
+                <div class="romaji">erebētā</div>
+                <div class="english">elevator</div>
+            </div>
+            <button class="play-button" onclick="speak('エレベーター', 'ja-JP')">▶</button>
+        </div>
+
+        <div class="phrase-card">
+            <div class="phrase-content">
+                <div class="japanese">階段</div>
+                <div class="romaji">kaidan</div>
+                <div class="english">stairs</div>
+            </div>
+            <button class="play-button" onclick="speak('かいだん', 'ja-JP')">▶</button>
+        </div>
+    </div>
+
+    <script>
+        function speak(text, lang) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = lang;
+            utterance.rate = 0.85;
+            utterance.pitch = 1;
+            utterance.volume = 1;
+
+            const button = event.target;
+            button.classList.add('playing');
+
+            utterance.onend = function() {
+                button.classList.remove('playing');
+            };
+
+            utterance.onerror = function() {
+                button.classList.remove('playing');
+            };
+
+            window.speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>
