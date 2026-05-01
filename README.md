@@ -2,6 +2,12 @@
 
 Interactive phrase guides with audio pronunciation specifically designed for travelers visiting Japan.
 
+## 🌐 Live Site
+
+**👉 [Start Learning Now](https://quynhva71.github.io/Basic-Japanese/Utils/index.html) 👈**
+
+Access the full interactive learning hub with audio pronunciation.
+
 ## 🚀 Quick Start
 
 **Planning a trip to Japan?** Start here: [`21_day_japanese_phrases.html`](21_day_japanese_phrases.html)
