@@ -6,7 +6,7 @@ Interactive Japanese phrase guides with audio pronunciation for travelers and le
 
 This repository contains two comprehensive HTML guides:
 
-### 1. **21-Day Japanese Speaking Plan** (`japanese_phrases.html`)
+### 1. **21-Day Japanese Speaking Plan** (`21_day_japanese_phrases.html`)
 A structured 21-day program to build conversational confidence in Japanese.
 
 - **Week 1:** Survival Confidence (Days 1-7)
